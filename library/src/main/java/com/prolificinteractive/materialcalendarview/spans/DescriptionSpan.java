@@ -8,7 +8,7 @@ import android.text.style.LineBackgroundSpan;
  * Created by Administrator on 2017/6/12 0012.
  */
 
-public class CircleBackgroundSpan implements LineBackgroundSpan {
+public class DescriptionSpan implements LineBackgroundSpan {
 
     /**
      * Default radius used
@@ -18,12 +18,12 @@ public class CircleBackgroundSpan implements LineBackgroundSpan {
     private final float radius;
     private final int color;
 
-    public CircleBackgroundSpan() {
+    public DescriptionSpan() {
         this.radius = DEFAULT_RADIUS;
         this.color = 0;
     }
 
-    public CircleBackgroundSpan(float radius, int color) {
+    public DescriptionSpan(float radius, int color) {
         this.radius = radius;
         this.color = color;
     }
@@ -36,10 +36,14 @@ public class CircleBackgroundSpan implements LineBackgroundSpan {
             int start, int end, int lineNum
     ) {
         int oldColor = paint.getColor();
+        float oldTxtSize = paint.getTextSize();
         if (color != 0) {
             paint.setColor(color);
         }
-        canvas.drawCircle((left + right) / 2, (top + bottom)/2, (left + right) / 2-10, paint);
+        paint.setTextSize(20);
+//        canvas.drawCircle((left + right) / 2, (top + bottom)/2, (left + right) / 2-5, paint);
+        canvas.drawText("休",(left + right) / 2-10,bottom+10,paint);
         paint.setColor(oldColor);
+        paint.setTextSize(oldTxtSize);
     }
 }

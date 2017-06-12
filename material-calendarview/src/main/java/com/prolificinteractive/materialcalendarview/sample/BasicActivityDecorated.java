@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 
 import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.DayViewDecorator;
+import com.prolificinteractive.materialcalendarview.DayViewFacade;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 import com.prolificinteractive.materialcalendarview.sample.decorators.EventDecorator;
@@ -104,6 +106,20 @@ public class BasicActivityDecorated extends AppCompatActivity implements OnDateS
             }
 
             widget.addDecorator(new EventDecorator(Color.RED, calendarDays));
+        }
+    }
+
+    class DayDecorator implements DayViewDecorator {
+
+        @Override
+        public boolean shouldDecorate(CalendarDay day) {
+
+            return false;
+        }
+
+        @Override
+        public void decorate(DayViewFacade view) {
+
         }
     }
 }
