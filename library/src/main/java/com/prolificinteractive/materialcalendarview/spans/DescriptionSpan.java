@@ -41,8 +41,8 @@ public class DescriptionSpan implements LineBackgroundSpan {
             paint.setColor(color);
         }
         paint.setTextSize(20);
-//        canvas.drawCircle((left + right) / 2, (top + bottom)/2, (left + right) / 2-5, paint);
-        canvas.drawText("休",(left + right) / 2-10,bottom+10,paint);
+        canvas.drawCircle((left + right) / 2, (top + bottom)/2, (left + right) / 2-10, paint);
+//        canvas.drawText("休",(left + right) / 2-10,bottom+15,paint);
         paint.setColor(oldColor);
         paint.setTextSize(oldTxtSize);
     }
