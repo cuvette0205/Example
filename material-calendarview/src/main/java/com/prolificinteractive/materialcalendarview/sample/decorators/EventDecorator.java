@@ -1,5 +1,7 @@
 package com.prolificinteractive.materialcalendarview.sample.decorators;
 
+import android.graphics.Color;
+
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
 import com.prolificinteractive.materialcalendarview.DayViewFacade;
@@ -31,5 +33,6 @@ public class EventDecorator implements DayViewDecorator {
     @Override
     public void decorate(DayViewFacade view) {
         view.addSpan(new DescriptionSpan(5, color));
+        view.addSpan(new CircleBackgroundSpan(5, Color.GRAY));
     }
 }

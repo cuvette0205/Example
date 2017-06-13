@@ -39,7 +39,7 @@ public class CircleBackgroundSpan implements LineBackgroundSpan {
         if (color != 0) {
             paint.setColor(color);
         }
-        canvas.drawCircle((left + right) / 2, (top + bottom)/2, (left + right) / 2-10, paint);
+        canvas.drawCircle((left + right) / 2, (top + bottom)/2, (left + right) / 2-20, paint);
         paint.setColor(oldColor);
     }
 }
